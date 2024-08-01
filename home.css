@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Jua&family=La+Belle+Aurore&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f18cf1;
+}
+
+.container-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.container-1 img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.container-1 img {
+    width: 200px;
+    transition: 1s;
+}
+
+.container-1 p {
+    position: absolute;
+    font-family: "Jua";
+    font-size: 50px;
+    user-select: none;
+    text-align: center;
+    z-index: -1;
+    color: white;
+    text-shadow: 1px 1px 10px rgb(255, 0, 225);
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.white {
+    height: 100vh;
+    position: relative;
+}
+
+.white:before {
+    z-index: -1000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background-image: linear-gradient(-180deg,
+            #9a4bc2 0%,
+            rgba(255, 255, 255, 0) 100%);
+}
+
+.white:after {
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    background-image: linear-gradient(0deg,
+            #e4aaef 0%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.squares {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.heart {
+    position: relative;
+    width: 58px;
+    height: 45px;
+    margin: 10px;
+    background-color: #edb5be;
+
+    transform: rotate(45deg); 
+    animation: squares 10.5s linear infinite;
+    align-self: flex-end;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 44.8px;
+    background-color: #edb5be;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 25px;
+}
+
+.heart:nth-child(2) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 1s;
+    animation-duration: 17s;
+    filter: blur(5px);
+}
+
+.heart:nth-child(3) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 1.5s;
+    animation-duration: 8s;
+    filter: blur();
+}
+
+.heart:nth-child(4) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 0.5s;
+    filter: blur(3px);
+    animation-duration: 13s;
+}
+
+.heart:nth-child(5) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 4s;
+    filter: blur(2px);
+    animation-duration: 11s;
+}
+
+.heart:nth-child(6) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 2s;
+    filter: blur(1px);
+    animation-duration: 9s;
+}
+
+.heart:nth-child(7) {
+    height: 45px;
+    width: 58px;
+    filter: blur(2.5px);
+    animation-duration: 12s;
+}
+
+.heart:nth-child(8) {
+    height: 45px;
+    width: 58px;
+    animation-delay: 5s;
+    filter: blur(6px);
+    animation-duration: 18s;
+}
+
+.heart:nth-child(9) {
+    height: 45px;
+    width: 58px;
+    filter: blur(0.5px);
+    animation-duration: 9s;
+}
+
+.heart:nth-child(10) {
+    height: 45px;
+    width: 56px;
+    animation-delay: 6s;
+    filter: blur(0.5px);
+    animation-duration: 12s;
+}
+
+@keyframes squares {
+    from {
+
+        transform: translateY(100%) rotate(-45deg);
+    }
+
+    to {
+        transform: translateY(calc(-100vh + -100%)) rotate(-45deg);
+    }
+}
+
+.tbl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Jua";
+    align-items: center;
+    color: white;
+}
+
+.tbl h1{
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hilang {
+    display: none;
+}

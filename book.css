@@ -1,0 +1,319 @@
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+
+
+
+.front,
+.back {
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(173,216,230,1) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.back {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(173,216,230,1) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    transform-origin: left;
+    transition: transform 0.5s;
+    background-size: cover;
+}
+
+#p1 .back {
+    background: url(isi-buku/Back.png);
+    background-size: cover;
+}
+
+#p2 .back {
+    background: url(isi-buku/back1.png);
+    background-size: cover;
+}
+
+#p3 .back {
+    background: url(isi-buku/back2.png);
+    background-size: cover;
+}
+
+#p4 .back {
+    background: url(isi-buku/back3.png);
+    background-size: cover;
+}
+
+#p5 .back {
+    background: url(isi-buku/back4.png);
+    background-size: cover;
+}
+
+#p6 .back {
+    background: url(isi-buku/back5.png);
+    background-size: cover;
+}
+
+#p7 .back {
+    background: url(isi-buku/back6.png);
+    background-size: cover;
+}
+
+#p8 .back {
+    background: url(isi-buku/back7.png);
+    background-size: cover;
+}
+
+#p9 .back {
+    background: url(isi-buku/back8.png);
+    background-size: cover;
+}
+
+#p10 .back {
+    background: url(isi-buku/back9.png);
+    background-size: cover;
+}
+
+#p11 .back {
+    background: url(isi-buku/backend.png);
+    background-size: cover;
+}
+
+#p12 .back {
+    background: url(isi-buku/Back.png);
+    background-size: cover;
+}
+
+
+#p1 .front{
+    background: url(isi-buku/judul.png);
+    background-size: cover;
+}
+
+#p2 .front{
+    background: url(isi-buku/halaman1.png);
+    background-size: cover;
+    
+}
+
+#p3 .front{
+    background: url(isi-buku/halaman2.png);
+    background-size: cover;
+    
+}
+
+#p4 .front{
+    background: url(isi-buku/halaman3.png);
+    background-size: cover;
+    
+}
+
+#p5 .front{
+    background: url(isi-buku/halaman4.png);
+    background-size: cover;
+    
+}
+
+#p6 .front{
+    background: url(isi-buku/halaman5.png);
+    background-size: cover;
+    
+}
+
+#p7 .front{
+    background: url(isi-buku/halaman6.png);
+    background-size: cover;
+    
+}
+
+#p8 .front{
+    
+    background: url(isi-buku/halaman7.png);
+    background-size: cover;
+}
+
+#p9 .front{
+    background: url(isi-buku/halaman8.png);
+    background-size: cover;
+    
+}
+
+#p10 .front{
+    background: url(isi-buku/halaman9.png);
+    background-size: cover;
+    
+}
+
+#p11 .front{
+    background: url(isi-buku/halaman10.png);
+    background-size: cover;
+    
+}
+
+#p12 .front{
+    background: url(isi-buku/halaman11.png);
+    background-size: cover;
+    
+}
+
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(255, 255, 255);
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin: 30px;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 12;
+}
+
+#p2 {
+    z-index: 11;
+}
+
+#p3 {
+    z-index: 10;
+}
+#p4 {
+    z-index: 9;
+}
+#p5 {
+    z-index: 8;
+}
+
+#p6 {
+    z-index: 7;
+}
+
+#p7 {
+    z-index: 6;
+}
+#p8 {
+    z-index: 5;
+}
+#p9 {
+    z-index: 4;
+}
+
+#p10 {
+    z-index: 3;
+}
+
+#p11 {
+    z-index: 2;
+}
+#p12 {
+    z-index: 1;
+}
+
+.title{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    .title{
+        display: block;
+        color: black;
+        padding: 20px 40px;
+        background-color: white;
+        box-shadow: 0px 0px 100px rgb(231, 40, 155);
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        border-radius: 20px;
+    }
+
+    .container-1 {
+        display: none;
+    }
+
+    .box{
+        display: none;
+    }
+}
