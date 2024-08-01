@@ -41,8 +41,8 @@ document.getElementById('clickableImage').addEventListener('click', function() {
     showTextForDuration('text17', 50000, 2000);
     showTextForDuration('text18', 53000, 2000);
     showTextForDuration('text19', 56000, 2000);
-    showTextForDuration('box', 59000, 120000);
-    showTextForDuration('text20', 180000, 12000);
+    showTextForDuration('box', 59000, 170000);
+    showTextForDuration('text20', 230000, 12000);
 });
 
 
